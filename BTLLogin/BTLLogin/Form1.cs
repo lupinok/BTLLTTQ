@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace BTLLogin
 {
 	public partial class Form1 : Form
 	{
-		private DataTable dtTaiKhoan; // Biến lưu trữ dữ liệu hàng hóa
+		private DataTable dtTaiKhoan;
 		private string sql; // Biến lưu trữ câu truy vấn SQL
 		private ProcessDataBase dtBase = new ProcessDataBase(); // Khởi tạo đối tượng để kết nối dữ liệu
 		private SaveFileDialog dlgSave = new SaveFileDialog(); // Đối tượng để lưu file
+		public string TenDangNhap { get; private set; }
 
 		public Form1()
 		{
@@ -52,10 +56,20 @@ namespace BTLLogin
 			if (dtTaiKhoan.Rows.Count > 0) // Đăng nhập thành công
 			{
 				MessageBox.Show("Đăng nhập thành công!");
+
+				// Lấy giá trị LoaiTaiKhoan từ bảng kết quả
+				string loaiTaiKhoan = dtTaiKhoan.Rows[0]["VaiTro"].ToString();
+
+
+				// Thiết lập SESSION_CONTEXT
+				// Cập nhật vào cơ sở dữ liệu
+				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = '{loaiTaiKhoan}'");
+				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'{tenDangNhap}'");
+
 				// Chuyển sang form mới (Form2)
-				GiaoDien form2 = new GiaoDien();
+				GiaoDien gd = new GiaoDien();
 				this.Hide(); // Ẩn form đăng nhập
-				form2.ShowDialog(); // Hiển thị form mới
+				gd.ShowDialog(); // Hiển thị form mới
 				this.Show(); // Hiện lại form đăng nhập sau khi đóng Form2
 			}
 			else

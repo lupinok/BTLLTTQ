@@ -37,8 +37,8 @@
 			this.button7 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
-			this.button10 = new System.Windows.Forms.Button();
-			this.button11 = new System.Windows.Forms.Button();
+			this.btnTaiKhoan = new System.Windows.Forms.Button();
+			this.btnHistory = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -123,23 +123,25 @@
 			this.button9.Text = "&Thanh toán";
 			this.button9.UseVisualStyleBackColor = true;
 			// 
-			// button10
+			// btnTaiKhoan
 			// 
-			this.button10.Location = new System.Drawing.Point(231, 211);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(161, 50);
-			this.button10.TabIndex = 9;
-			this.button10.Text = "Tà&i khoản";
-			this.button10.UseVisualStyleBackColor = true;
+			this.btnTaiKhoan.Location = new System.Drawing.Point(231, 211);
+			this.btnTaiKhoan.Name = "btnTaiKhoan";
+			this.btnTaiKhoan.Size = new System.Drawing.Size(161, 50);
+			this.btnTaiKhoan.TabIndex = 9;
+			this.btnTaiKhoan.Text = "Tà&i khoản";
+			this.btnTaiKhoan.UseVisualStyleBackColor = true;
+			this.btnTaiKhoan.Click += new System.EventHandler(this.button10_Click);
 			// 
-			// button11
+			// btnHistory
 			// 
-			this.button11.Location = new System.Drawing.Point(418, 211);
-			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(161, 50);
-			this.button11.TabIndex = 10;
-			this.button11.Text = "Lịch &sử hoạt động";
-			this.button11.UseVisualStyleBackColor = true;
+			this.btnHistory.Location = new System.Drawing.Point(418, 211);
+			this.btnHistory.Name = "btnHistory";
+			this.btnHistory.Size = new System.Drawing.Size(161, 50);
+			this.btnHistory.TabIndex = 10;
+			this.btnHistory.Text = "Lịch &sử hoạt động";
+			this.btnHistory.UseVisualStyleBackColor = true;
+			this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
 			// 
 			// button12
 			// 
@@ -157,8 +159,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.button12);
-			this.Controls.Add(this.button11);
-			this.Controls.Add(this.button10);
+			this.Controls.Add(this.btnHistory);
+			this.Controls.Add(this.btnTaiKhoan);
 			this.Controls.Add(this.button9);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.button7);
@@ -185,8 +187,8 @@
 		private System.Windows.Forms.Button button7;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Button button9;
-		private System.Windows.Forms.Button button10;
-		private System.Windows.Forms.Button button11;
+		private System.Windows.Forms.Button btnTaiKhoan;
+		private System.Windows.Forms.Button btnHistory;
 		private System.Windows.Forms.Button button12;
 	}
 }

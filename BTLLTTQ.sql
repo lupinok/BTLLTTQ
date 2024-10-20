@@ -1078,11 +1078,13 @@ END;
 
 
 --test
---EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = 'Quản trị viên';
---EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'admin';
+EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = 'Quản trị viên';
+EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'admin';
 --INSERT INTO NhanVien (MaNhanVien, HoTen, NgaySinh, SoDienThoai, Email, NgayBatDauLamViec, MaPhongBan, MaChucVu) VALUES
 --(51, N'Nguyễn Văn An', '1990-01-15', 0912345678, 'an.nguyen@example.com', '2022-01-10', 8, 801);
 --INSERT INTO PhongBan (MaPhongBan, TenPhongBan, SoLuongNhanVien, TruongPhong) VALUES
 --(8, N'chilllle', 0, N'');
 --INSERT INTO ChucVu (MaChucVu, TenChucVu, LuongChucVu) VALUES
 --(801, N'Trưởng phòng chill', 15000000);
+INSERT INTO TaiKhoan (TenDangNhap, MatKhau, VaiTro, TrangThaiTaiKhoan, NgayTao) VALUES
+(N'test3', N'123', N'Chỉnh sửa', N'Kích hoạt', GETDATE());
