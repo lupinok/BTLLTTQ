@@ -187,6 +187,7 @@
 			this.Controls.Add(this.btnTaoTaiKhoan);
 			this.Name = "TaiKhoan";
 			this.Text = "TaiKhoan";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TaiKhoan_FormClosing);
 			this.Load += new System.EventHandler(this.TaiKhoan_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
 			this.ResumeLayout(false);

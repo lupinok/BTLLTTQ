@@ -14,7 +14,7 @@ namespace BTLLogin
 	{
 		private DataTable dtTaiKhoan;
 		private string sql; // Biến lưu trữ câu truy vấn SQL
-		private ProcessDataBase dtBase = new ProcessDataBase(); // Khởi tạo đối tượng để kết nối dữ liệu
+		private ProcessDataBase dtBase = ProcessDataBase.GetInstance(); // Khởi tạo đối tượng để kết nối dữ liệu
 		private SaveFileDialog dlgSave = new SaveFileDialog(); // Đối tượng để lưu file
 		public TaiKhoan()
 		{
@@ -23,6 +23,7 @@ namespace BTLLogin
 
 		private void TaiKhoan_Load(object sender, EventArgs e)
 		{
+			dtBase.KetNoiCSDL();
 			// Tải dữ liệu và thêm chỉ mục "Tất cả"
 			ResetValue();
 			DataTable dtTaiKhoan = dtBase.DocBang("Select * from TaiKhoan");
@@ -195,6 +196,10 @@ namespace BTLLogin
 					isEditing = false;
 				}
 			}
+		}
+
+		private void TaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
+		{
 		}
 	}
 

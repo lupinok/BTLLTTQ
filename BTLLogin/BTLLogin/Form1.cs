@@ -17,7 +17,7 @@ namespace BTLLogin
 	{
 		private DataTable dtTaiKhoan;
 		private string sql; // Biến lưu trữ câu truy vấn SQL
-		private ProcessDataBase dtBase = new ProcessDataBase(); // Khởi tạo đối tượng để kết nối dữ liệu
+		private ProcessDataBase dtBase = ProcessDataBase.GetInstance(); // Khởi tạo đối tượng để kết nối dữ liệu
 		private SaveFileDialog dlgSave = new SaveFileDialog(); // Đối tượng để lưu file
 		public string TenDangNhap { get; private set; }
 
@@ -62,9 +62,9 @@ namespace BTLLogin
 
 
 				// Thiết lập SESSION_CONTEXT
-				// Cập nhật vào cơ sở dữ liệu
-				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = '{loaiTaiKhoan}'");
-				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'{tenDangNhap}'");
+				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = '{loaiTaiKhoan}'" + 
+					$"EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'{tenDangNhap}'");
+
 				// Chuyển sang form mới (Form2)
 				GiaoDien gd = new GiaoDien();
 				this.Hide(); // Ẩn form đăng nhập
@@ -79,6 +79,17 @@ namespace BTLLogin
 
 		private void Form1_Load_1(object sender, EventArgs e)
 		{
+			dtBase.KetNoiCSDL();
+		}
+
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			dtBase.DongKetNoiCSDL();
+		}
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }

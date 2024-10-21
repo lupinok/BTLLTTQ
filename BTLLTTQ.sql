@@ -866,13 +866,13 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Phòng Ban', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật phòng ban ' + @TenPhongBan, @TenDangNhap);
+            VALUES (N'Update Phòng Ban', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật phòng ban ' + @TenPhongBan, @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Phòng Ban', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa phòng ban ' + @TenPhongBan, @TenDangNhap);
+            VALUES (N'Xóa Phòng Ban', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa phòng ban ' + @TenPhongBan, @TenDangNhap);
         END
     END
 END;
@@ -900,13 +900,13 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Nhân Viên', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật nhân viên ' + @HoTen, @TenDangNhap);
+            VALUES (N'Update Nhân Viên', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật nhân viên ' + @HoTen, @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Nhân viên', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa nhân viên ' + @HoTen, @TenDangNhap);
+            VALUES (N'Xóa Nhân viên', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa nhân viên ' + @HoTen, @TenDangNhap);
         END
     END
 END;
@@ -930,13 +930,13 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Hợp Đồng', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật hợp đồng', @TenDangNhap);
+            VALUES (N'Update Hợp Đồng', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật hợp đồng', @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Hợp Đồng', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa hợp đồng', @TenDangNhap);
+            VALUES (N'Xóa Hợp Đồng', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa hợp đồng', @TenDangNhap);
         END
     END
 END;
@@ -965,13 +965,13 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Dự Án', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật dự án ' + @TenDuAn, @TenDangNhap);
+            VALUES (N'Update Dự Án', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật dự án ' + @TenDuAn, @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Dự Án', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa dự án ' + @TenDuAn, @TenDangNhap);
+            VALUES (N'Xóa Dự Án', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa dự án ' + @TenDuAn, @TenDangNhap);
         END
     END
 END;
@@ -1000,13 +1000,13 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Khóa Đào Tạo', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật khóa đào tạo ' + @TenKhoa, @TenDangNhap);
+            VALUES (N'Update Khóa Đào Tạo', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật khóa đào tạo ' + @TenKhoa, @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Khóa Đào Tạo', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa khóa đào tạo ' + @TenKhoa, @TenDangNhap);
+            VALUES (N'Xóa Khóa Đào Tạo', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa khóa đào tạo ' + @TenKhoa, @TenDangNhap);
         END
     END
 END;
@@ -1024,7 +1024,7 @@ BEGIN
     SET @TenDangNhap = CONVERT(NVARCHAR(100), SESSION_CONTEXT(N'TenDangNhap'));
 
     -- Kiểm tra xem người dùng có phải là admin hay không
-    IF @LoaiTaiKhoan IN ('Quản trị viên', 'Chỉnh sửa')
+    IF @LoaiTaiKhoan IN (N'Quản trị viên', N'Chỉnh sửa')
     BEGIN
 		DECLARE @MaChucVu INT;
         DECLARE @TenChucVu NVARCHAR(100);
@@ -1035,13 +1035,13 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Chức Vụ', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật chức vụ ' + @TenChucVu, @TenDangNhap);
+            VALUES (N'Update Chức Vụ', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật chức vụ ' + @TenChucVu, @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Chức Vụ', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa chức vụ ' + @TenChucVu, @TenDangNhap);
+            VALUES (N'Xóa Chức Vụ', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa chức vụ ' + @TenChucVu, @TenDangNhap);
         END
     END
 END;
@@ -1065,26 +1065,25 @@ BEGIN
         IF EXISTS (SELECT * FROM inserted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Update Tài Khoản', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã thêm hoặc cập nhật tài khoản mới', @TenDangNhap);
+            VALUES (N'Update Tài Khoản', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã thêm hoặc cập nhật tài khoản mới', @TenDangNhap);
         END
         -- Xử lý cho sự kiện DELETE
         IF EXISTS (SELECT * FROM deleted)
         BEGIN
             INSERT INTO LichSuHoatDong (LoaiHoatDong, ThoiGian, GhiChu, TenDangNhap)
-            VALUES ('Xóa Tài Khoản', GETDATE(), 'Người dùng ' + @TenDangNhap + ' đã xóa một tài khoản', @TenDangNhap);
+            VALUES (N'Xóa Tài Khoản', GETDATE(), N'Người dùng ' + @TenDangNhap + N' đã xóa một tài khoản', @TenDangNhap);
         END
     END
 END;
 
-
 --test
---EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = 'Quản trị viên';
---EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'admin';
+EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = 'Quản trị viên';
+EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'admin';
 --INSERT INTO NhanVien (MaNhanVien, HoTen, NgaySinh, SoDienThoai, Email, NgayBatDauLamViec, MaPhongBan, MaChucVu) VALUES
 --(51, N'Nguyễn Văn An', '1990-01-15', 0912345678, 'an.nguyen@example.com', '2022-01-10', 8, 801);
---INSERT INTO PhongBan (MaPhongBan, TenPhongBan, SoLuongNhanVien, TruongPhong) VALUES
---(8, N'chilllle', 0, N'');
+INSERT INTO PhongBan (MaPhongBan, TenPhongBan, SoLuongNhanVien, TruongPhong) VALUES
+(8, N'chilllle', 0, N'');
 --INSERT INTO ChucVu (MaChucVu, TenChucVu, LuongChucVu) VALUES
 --(801, N'Trưởng phòng chill', 15000000);
---INSERT INTO TaiKhoan (TenDangNhap, MatKhau, VaiTro, TrangThaiTaiKhoan, NgayTao) VALUES
---(N'test3', N'123', N'Chỉnh sửa', N'Kích hoạt', GETDATE());
+INSERT INTO TaiKhoan (TenDangNhap, MatKhau, VaiTro, TrangThaiTaiKhoan, NgayTao) VALUES
+(N'test3', N'123', N'Chỉnh sửa', N'Kích hoạt', GETDATE());
