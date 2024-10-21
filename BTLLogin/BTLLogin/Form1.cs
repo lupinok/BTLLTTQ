@@ -65,7 +65,6 @@ namespace BTLLogin
 				// Cập nhật vào cơ sở dữ liệu
 				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = '{loaiTaiKhoan}'");
 				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'{tenDangNhap}'");
-
 				// Chuyển sang form mới (Form2)
 				GiaoDien gd = new GiaoDien();
 				this.Hide(); // Ẩn form đăng nhập

@@ -32,5 +32,13 @@ namespace BTLLogin
 			history.ShowDialog(); // Hiển thị form mới
 			this.Show(); // Hiện lại form trước sau khi đóng Form mới
 		}
+
+		private void button12_Click(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			{
+				this.Close();
+			}
+		}
 	}
 }

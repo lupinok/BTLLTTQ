@@ -39,7 +39,7 @@
 			this.button9 = new System.Windows.Forms.Button();
 			this.btnTaiKhoan = new System.Windows.Forms.Button();
 			this.btnHistory = new System.Windows.Forms.Button();
-			this.button12 = new System.Windows.Forms.Button();
+			this.btnDangXuat = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -143,22 +143,23 @@
 			this.btnHistory.UseVisualStyleBackColor = true;
 			this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
 			// 
-			// button12
+			// btnDangXuat
 			// 
-			this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-			this.button12.Location = new System.Drawing.Point(686, 404);
-			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(102, 34);
-			this.button12.TabIndex = 11;
-			this.button12.Text = "Đăng &xuất";
-			this.button12.UseVisualStyleBackColor = true;
+			this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+			this.btnDangXuat.Location = new System.Drawing.Point(686, 404);
+			this.btnDangXuat.Name = "btnDangXuat";
+			this.btnDangXuat.Size = new System.Drawing.Size(102, 34);
+			this.btnDangXuat.TabIndex = 11;
+			this.btnDangXuat.Text = "Đăng &xuất";
+			this.btnDangXuat.UseVisualStyleBackColor = true;
+			this.btnDangXuat.Click += new System.EventHandler(this.button12_Click);
 			// 
 			// GiaoDien
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.button12);
+			this.Controls.Add(this.btnDangXuat);
 			this.Controls.Add(this.btnHistory);
 			this.Controls.Add(this.btnTaiKhoan);
 			this.Controls.Add(this.button9);
@@ -189,6 +190,6 @@
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button btnTaiKhoan;
 		private System.Windows.Forms.Button btnHistory;
-		private System.Windows.Forms.Button button12;
+		private System.Windows.Forms.Button btnDangXuat;
 	}
 }
