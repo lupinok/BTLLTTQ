@@ -36,7 +36,7 @@
 			this.button6 = new System.Windows.Forms.Button();
 			this.button7 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
-			this.button9 = new System.Windows.Forms.Button();
+			this.btnThanhToan = new System.Windows.Forms.Button();
 			this.btnTaiKhoan = new System.Windows.Forms.Button();
 			this.btnHistory = new System.Windows.Forms.Button();
 			this.btnDangXuat = new System.Windows.Forms.Button();
@@ -80,7 +80,7 @@
 			// 
 			// button5
 			// 
-			this.button5.Location = new System.Drawing.Point(40, 133);
+			this.button5.Location = new System.Drawing.Point(418, 133);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(161, 50);
 			this.button5.TabIndex = 4;
@@ -89,7 +89,7 @@
 			// 
 			// button6
 			// 
-			this.button6.Location = new System.Drawing.Point(231, 133);
+			this.button6.Location = new System.Drawing.Point(608, 133);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(161, 50);
 			this.button6.TabIndex = 5;
@@ -98,7 +98,7 @@
 			// 
 			// button7
 			// 
-			this.button7.Location = new System.Drawing.Point(418, 133);
+			this.button7.Location = new System.Drawing.Point(40, 133);
 			this.button7.Name = "button7";
 			this.button7.Size = new System.Drawing.Size(161, 50);
 			this.button7.TabIndex = 6;
@@ -107,21 +107,21 @@
 			// 
 			// button8
 			// 
-			this.button8.Location = new System.Drawing.Point(608, 133);
+			this.button8.Location = new System.Drawing.Point(231, 133);
 			this.button8.Name = "button8";
 			this.button8.Size = new System.Drawing.Size(161, 50);
 			this.button8.TabIndex = 7;
 			this.button8.Text = "Phiếu &lương";
 			this.button8.UseVisualStyleBackColor = true;
 			// 
-			// button9
+			// btnThanhToan
 			// 
-			this.button9.Location = new System.Drawing.Point(40, 211);
-			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(161, 50);
-			this.button9.TabIndex = 8;
-			this.button9.Text = "&Thanh toán";
-			this.button9.UseVisualStyleBackColor = true;
+			this.btnThanhToan.Location = new System.Drawing.Point(40, 211);
+			this.btnThanhToan.Name = "btnThanhToan";
+			this.btnThanhToan.Size = new System.Drawing.Size(161, 50);
+			this.btnThanhToan.TabIndex = 8;
+			this.btnThanhToan.Text = "&Thanh toán";
+			this.btnThanhToan.UseVisualStyleBackColor = true;
 			// 
 			// btnTaiKhoan
 			// 
@@ -162,7 +162,7 @@
 			this.Controls.Add(this.btnDangXuat);
 			this.Controls.Add(this.btnHistory);
 			this.Controls.Add(this.btnTaiKhoan);
-			this.Controls.Add(this.button9);
+			this.Controls.Add(this.btnThanhToan);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.button7);
 			this.Controls.Add(this.button6);
@@ -173,6 +173,7 @@
 			this.Controls.Add(this.button1);
 			this.Name = "GiaoDien";
 			this.Text = "GiaoDien";
+			this.Load += new System.EventHandler(this.GiaoDien_Load);
 			this.ResumeLayout(false);
 
 		}
@@ -187,7 +188,7 @@
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button7;
 		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button9;
+		private System.Windows.Forms.Button btnThanhToan;
 		private System.Windows.Forms.Button btnTaiKhoan;
 		private System.Windows.Forms.Button btnHistory;
 		private System.Windows.Forms.Button btnDangXuat;

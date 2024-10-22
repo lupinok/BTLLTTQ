@@ -65,6 +65,9 @@ namespace BTLLogin
 				dtBase.CapNhatDuLieu($"EXEC sp_set_session_context @key = N'LoaiTaiKhoan', @value = '{loaiTaiKhoan}'" + 
 					$"EXEC sp_set_session_context @key = N'TenDangNhap', @value = N'{tenDangNhap}'");
 
+				// Gán giá trị TenDangNhap vào UserSession
+				UserSession.TenDangNhap = tenDangNhap;
+
 				// Chuyển sang form mới (Form2)
 				GiaoDien gd = new GiaoDien();
 				this.Hide(); // Ẩn form đăng nhập
@@ -90,6 +93,22 @@ namespace BTLLogin
 		private void panel1_Paint(object sender, PaintEventArgs e)
 		{
 
+		}
+
+		private void txtTenDangNhap_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				txtMatKhau.Focus(); // Chuyển focus sang ô mật khẩu nếu nhấn Enter tại ô tên đăng nhập
+			}
+		}
+
+		private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnDangNhap_Click(sender, e); // Gọi sự kiện đăng nhập khi nhấn Enter
+			}
 		}
 	}
 }

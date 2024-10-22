@@ -73,6 +73,7 @@
     <Compile Include="TaiKhoan.Designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

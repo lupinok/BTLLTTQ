@@ -82,21 +82,21 @@
 			// 
 			this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
 			this.txtTenDangNhap.Location = new System.Drawing.Point(328, 149);
-			this.txtTenDangNhap.Multiline = true;
 			this.txtTenDangNhap.Name = "txtTenDangNhap";
-			this.txtTenDangNhap.Size = new System.Drawing.Size(261, 36);
+			this.txtTenDangNhap.Size = new System.Drawing.Size(261, 30);
 			this.txtTenDangNhap.TabIndex = 3;
 			this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
+			this.txtTenDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenDangNhap_KeyDown);
 			// 
 			// txtMatKhau
 			// 
 			this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
 			this.txtMatKhau.Location = new System.Drawing.Point(328, 212);
-			this.txtMatKhau.Multiline = true;
 			this.txtMatKhau.Name = "txtMatKhau";
-			this.txtMatKhau.Size = new System.Drawing.Size(261, 36);
+			this.txtMatKhau.Size = new System.Drawing.Size(261, 30);
 			this.txtMatKhau.TabIndex = 4;
 			this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
+			this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
 			// 
 			// btnDangNhap
 			// 

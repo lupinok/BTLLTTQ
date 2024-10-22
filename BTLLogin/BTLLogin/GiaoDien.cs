@@ -40,5 +40,15 @@ namespace BTLLogin
 				this.Close();
 			}
 		}
+
+		private void GiaoDien_Load(object sender, EventArgs e)
+		{
+			if (UserSession.TenDangNhap != "admin")
+			{
+				btnTaiKhoan.Hide();
+				btnHistory.Hide();
+				btnThanhToan.Hide();
+			}
+		}
 	}
 }
